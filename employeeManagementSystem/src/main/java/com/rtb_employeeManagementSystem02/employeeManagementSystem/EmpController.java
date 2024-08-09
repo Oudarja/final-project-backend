@@ -20,7 +20,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin("https://realtime-backend-project-fronted-production.up.railway.app/")
+// @CrossOrigin("https://realtime-backend-project-fronted-production.up.railway.app/")
+@CrossOrigin(origins = "*")
 public class EmpController {
 
     // Object can be made from interface but the memory allocation
