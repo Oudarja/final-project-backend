@@ -18,23 +18,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-// @CrossOrigin(origins = "*")
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-
-@Configuration
-public class WebConfig implements WebMvcConfigurer {
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-                .allowedOrigins("https://realtime-backend-project-fronted-production.up.railway.app/")
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS");
-    }
-}
 @RestController
-@CrossOrigin("https://realtime-backend-project-fronted-production.up.railway.app/")
+@CrossOrigin("https://realtime-backend-project-fronted-production.up.railway.app")
 public class EmpController {
 
     // Object can be made from interface but the memory allocation
