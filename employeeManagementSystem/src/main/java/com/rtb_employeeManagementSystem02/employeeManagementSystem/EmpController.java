@@ -18,8 +18,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-// @CrossOrigin("https://realtime-backend-project-fronted-production.up.railway.app/")
 // @CrossOrigin(origins = "*")
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -36,6 +34,7 @@ public class WebConfig implements WebMvcConfigurer {
     }
 }
 @RestController
+@CrossOrigin("https://realtime-backend-project-fronted-production.up.railway.app/")
 public class EmpController {
 
     // Object can be made from interface but the memory allocation
