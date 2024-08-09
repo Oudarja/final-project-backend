@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin("https://employee-management-system-fronted.vercel.app/")
+@CrossOrigin("https://employee-management-system-fronted.vercel.app")
 // @CrossOrigin("http://localhost:3000/")
 public class EmpController {
 
