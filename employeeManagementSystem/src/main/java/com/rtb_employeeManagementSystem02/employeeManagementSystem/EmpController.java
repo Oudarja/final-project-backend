@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin("https://employee-management-system-fronted.vercel.app/")
+@CrossOrigin("https://realtime-backend-project-fronted-production.up.railway.app/")
 public class EmpController {
 
     // Object can be made from interface but the memory allocation
@@ -32,20 +32,20 @@ public class EmpController {
 
     // Get for reading
     // To map method to url this getmapping,putmapping or sevral mapping used
-    @GetMapping("app")
+    @GetMapping(".app")
     public List<Employee> getAllEmployees() {
         // service layer method used
         return employeeService.readEmployees();
     }
 
-    @GetMapping("app/{id}")
+    @GetMapping(".app/{id}")
     public Employee getEmployeeById(@PathVariable Long id) {
         // service layer method used
         return employeeService.readEmployee(id);
     }
 
     // Post for creating
-    @PostMapping("app")
+    @PostMapping(".app")
     // Here @RequestBody is denoted as HTML body. From body request
     // is sent
     public String createEmployee(@RequestBody Employee employee) {
@@ -53,7 +53,7 @@ public class EmpController {
         return employeeService.creatEmployee(employee);
     }
 
-    @DeleteMapping("app/{id}")
+    @DeleteMapping(".app/{id}")
     public String deleteEmployee(@PathVariable Long id) {
         if (employeeService.deleteEmployee(id))
             return "Deleted Successfully";
@@ -65,7 +65,7 @@ public class EmpController {
      * From url path Id is taken and from body of
      * web page updated employ entity will be taken
      */
-    @PutMapping("app/{id}")
+    @PutMapping(".app/{id}")
     public String putMethodName(@PathVariable Long id, @RequestBody Employee employee) {
 
         return employeeService.updateEmployee(id, employee);
