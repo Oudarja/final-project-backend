@@ -21,7 +21,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @Entity
-@Table(name = "EmployeeTable")
+@Table(name = "railway")
 public class EmployeeEntity {
     // The @Id annotation marks the id field as
     // the primary key of the entity.It is given
