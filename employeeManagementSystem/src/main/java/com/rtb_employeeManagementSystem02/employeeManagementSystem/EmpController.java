@@ -33,20 +33,20 @@ public class EmpController {
 
     // Get for reading
     // To map method to url this getmapping,putmapping or sevral mapping used
-    @GetMapping("/employees")
+    @GetMapping("//final-project-backend-production-86ca.up.railway.app")
     public List<Employee> getAllEmployees() {
         // service layer method used
         return employeeService.readEmployees();
     }
 
-    @GetMapping("/employees/{id}")
+    @GetMapping("//final-project-backend-production-86ca.up.railway.app//{id}")
     public Employee getEmployeeById(@PathVariable Long id) {
         // service layer method used
         return employeeService.readEmployee(id);
     }
 
     // Post for creating
-    @PostMapping("/employees")
+    @PostMapping("//final-project-backend-production-86ca.up.railway.app/")
     // Here @RequestBody is denoted as HTML body. From body request
     // is sent
     public String createEmployee(@RequestBody Employee employee) {
@@ -54,7 +54,7 @@ public class EmpController {
         return employeeService.creatEmployee(employee);
     }
 
-    @DeleteMapping("/employees/{id}")
+    @DeleteMapping("//final-project-backend-production-86ca.up.railway.app//{id}")
     public String deleteEmployee(@PathVariable Long id) {
         if (employeeService.deleteEmployee(id))
             return "Deleted Successfully";
@@ -66,7 +66,7 @@ public class EmpController {
      * From url path Id is taken and from body of
      * web page updated employ entity will be taken
      */
-    @PutMapping("/employees/{id}")
+    @PutMapping("//final-project-backend-production-86ca.up.railway.app//{id}")
     public String putMethodName(@PathVariable Long id, @RequestBody Employee employee) {
 
         return employeeService.updateEmployee(id, employee);
